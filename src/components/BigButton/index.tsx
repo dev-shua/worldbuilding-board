@@ -10,6 +10,7 @@ const Button = styled("div")`
   align-items: center;
   justify-content: center;
   flex-flow: column;
+  box-sizing: border-box;
   & a {
     width: 240px;
     max-width: 240px;
@@ -21,7 +22,7 @@ const Button = styled("div")`
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    box-shadow: 0 0 0 1px inset rgba(${({theme}) => convertToRGB(theme.palette.basics.white)}, 0.3);
+    box-shadow: 0 0 0 1px inset rgba(${({theme}) => convertToRGB(theme.palette.basics.white)} / 30%);
     position: relative;
     margin: 10px 0;
     &:after,&:before {
